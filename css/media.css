@@ -1,0 +1,64 @@
+@media only screen and (max-width: 786px)  {
+	.main-menu{
+        display: none;
+        position: absolute;
+    }
+    .responsiveButton{
+        display: flex;
+    }
+    .responsiveButton.active + .main-menu{
+        display: block;
+    }
+    .main-menu{
+        right: 0;
+        top:40px;
+        width: 150px;
+    }
+        
+    .main-menu ul{
+        flex-direction: column;
+        
+    }
+    .main-menu ul li{
+        padding: 10px 5px;
+        margin: 0;
+        background-color: #9c9c9c;
+        border-bottom:1px solid #747474;
+    }
+     .main-menu ul li:last-of-type{
+        border-bottom: none;
+    }
+}
+@media only screen and (max-width: 426px)  {
+	.cardSection{
+        flex-direction: column;
+    }
+    .card{
+        margin:0 0 15px 0;
+    }
+    .card:last-of-type{
+        margin:0;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer > div{
+        padding: 0 0 15px 0;
+        margin: 0 0 15px 0;
+        border-bottom: 1px solid var(--BordercolourOne);
+    }
+    footer > div:last-of-type{
+        padding: 0;
+        margin: 0;
+        border-bottom: none;
+    }
+    .copy{
+        text-align: center;
+    }
+    .footerMenu{
+        display: flex;
+    }
+    .footerMenu ul{
+        margin: 0 auto;
+    }
+}

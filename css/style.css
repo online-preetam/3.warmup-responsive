@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --colourOne:rgba(0,0,0,1);
+    --colourTwo:rgba(255,138,0,1);
+    --colourThree:rgba(0,68,221,1);
+    --colourfour:rgba(255,255,255,1);
+    --BordercolourOne:rgba(154,154,154,1);
+    --rotationOne: rotate(0);
+    --animationOne: all .5s ease-out;
+}
+body{
+    margin: 0; 
+    padding: 0;
+    font:normal 14px/normal Arial, Helvetica, sans-serif;
+}
+.wraper{
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+.wraper *:last-child{
+    margin-bottom: 0;
+}
+header{
+    padding: 15px 0;
+    margin: 0 0 15px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--BordercolourOne); 
+    position: relative;
+}
+.logo{
+    padding: 0;
+    margin: 0 50px 0 0;
+    max-width: 100px;
+}
+.logo a{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+.logo a img{
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+.main-menu{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.main-menu ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+.main-menu ul li{
+    padding: 0;
+    margin: 0 15px 0 0;
+}
+.main-menu ul li:last-of-type{
+    margin: 0;
+}
+.main-menu ul li a{
+    color: var(--colourOne);
+    text-decoration: none;
+    transition: var(--animationOne);
+}
+.main-menu ul li:hover a{
+    color: var(--colourTwo);
+}
+.heroSection{
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid var(--BordercolourOne);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heroSection h1{
+    text-transform: uppercase;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    text-align: center;
+}
+.heroButtan{
+    padding: 15px;
+    margin: 0;
+    border-radius: 3px;
+    color: var(--colourThree);
+    background-color: transparent;
+    border: 1px solid var(--colourThree);
+    text-decoration: none;
+    transition: var(--animationOne);
+
+}
+.heroButtan:hover{
+    color: var(--colourfour);
+    background-color: var(--colourThree);
+
+}
+.cardSection{
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid var(--BordercolourOne);
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    padding: 15px;
+    margin: 0 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*width:33.33%;*/
+    flex-grow: 1;
+    border-radius: 3px;
+    border:1px solid var(--BordercolourOne);
+}
+.card:last-of-type{
+    margin: 0;
+}
+.iconHolder{
+    padding: 0;
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-align: center;
+}
+.iconHolder img{
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+.card h3{
+    padding: 0;
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.card p{
+    padding: 0;
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+.card *:last-child{
+    margin-bottom: 0;
+}
+footer{
+    padding: 15px 0;
+    margin: 0 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+footer > div{
+    padding: 0;
+    margin: 0 15px 0 0;
+}
+footer > div:last-of-type{
+    margin-right:0;
+}
+.copy{
+    font-size: 12px;
+}
+.footerMenu ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+.footerMenu ul li{
+    padding: 0 5px 0 0;
+    margin: 0 5px 0 0;
+    border-right: 1px solid #000;
+}
+.footerMenu ul li:last-of-type{
+    padding: 0;
+    margin: 0;
+    border-right: none;
+}
+.footerMenu ul li a{
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+}
+.footerMenu ul li:hover a{
+    color: #ff0000;
+}
+.responsiveButton{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: none;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    right: 0;
+}
+.responsiveButton span{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 1);
+   
+}
+.responsiveButton span:nth-of-type(1){
+    top:0;
+    left:50%;
+    rotate: 0deg;
+    transition: var(--animationOne);
+    transform: translate(-50%, -50%);
+}
+.responsiveButton.active span:nth-of-type(1){
+    top:50%;
+    left: 50%;
+    rotate: 45deg;
+    transition: var(--animationOne);
+    transform: translate(-50%, -50%);
+    margin-top:8px;
+    margin-left:-4px;
+}
+.responsiveButton span:nth-of-type(3){
+    bottom:0;
+    left:50%;
+    rotate: 0deg;
+    transition: var(--animationOne);
+    transform: translate(-50%, -50%);
+}
+.responsiveButton.active span:nth-of-type(3){
+    bottom:50%;
+    left:50%;
+    rotate: -45deg;
+    transition: var(--animationOne);
+    transform: translate(-50%, -50%);
+    margin-bottom:4px;
+    margin-left:-3px;
+}
+.responsiveButton span:nth-of-type(2){
+    top:50%;
+    left:50%;
+    rotate: 0deg;
+    transition: var(--animationOne);
+    transform: translate(-50%, -50%);
+}
+.responsiveButton.active span:nth-of-type(2){
+    background-color: rgba(0, 0, 0, 0);
+    transition: var(--animationOne);
+}
+
+
+/*.responsiveButton span:nth-of-type(1){
+    top:50%;
+    margin-top: -5px;
+    rotate: 0deg;
+    transition: var(--animationOne);
+    left:50%;
+    transform: translateX(-50%);
+}
+.responsiveButton span:nth-of-type(2){
+    top:50%;
+    margin-top: -1px;
+    transition: var(--animationOne);
+}
+.responsiveButton span:nth-of-type(3){
+    top:50%;
+    margin-top: 4px;
+    rotate: 0deg;
+    transition: var(--animationOne);
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.responsiveButton.active span:nth-of-type(2){
+    background-color: rgba(0, 0, 0, 0);
+    transition: var(--animationOne);
+    top:50%;
+}
+.responsiveButton.active span:nth-of-type(1){
+    rotate: 45deg;
+    transition: var(--animationOne);
+}
+.responsiveButton.active span:nth-of-type(3){
+    rotate: -45deg;
+    transition: var(--animationOne);
+    top:50%;
+}*/
