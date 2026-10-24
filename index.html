@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Warm-up: a responsive landing page built with semantic HTML and modern CSS.">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/media.css"/>
+    <script src="script/script.js" defer></script>
     <title>Warm-up</title>
 </head>
 <body>
-    <section class="wraper">
+    <div class="wrapper">
         <header>
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png"></a>
+                <a href="index.html"><img src="images/logo.png" alt="demo-logo" width="120" height="40"></a>
             </div>
-            <div class="responsiveButton">
+            <!--<button class="menu-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">-->
+              <button class="menu-toggle" type="button">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <nav class="main-menu">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </nav>
+            </button>
+            <!--<nav class="main-menu" id="main-menu" aria-label="Main">-->
+            <nav class="main-menu" id="main-menu" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
         </header>
-        <div class="heroSection">
+        <main class="main-section">
+        <div class="hero-section">
             <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
-            <a href="#" class="heroButtan">Demo Button</a>
+            <a href="#" class="hero-button">Demo Button</a>
         </div>
-        <div class="cardSection">
+        <div class="card-section">
             <div class="card">
-                <div class="iconHolder"><img src="images/home.png" alt="home"></div>
-                <h3>HOME</h3>
+                <div class="icon-holder"><img src="images/home.png" alt="home"></div>
+                <h2>HOME</h2>
                 <p>Lorem Ipsum is simply dummy text of the</p>
             </div>
             <div class="card">
-                <div class="iconHolder"><img src="images/envelope.png" alt="envelope"></div>
-                <h3>ENVELOPE</h3>
+                <div class="icon-holder"><img src="images/envelope.png" alt="envelope"></div>
+                <h2>ENVELOPE</h2>
                 <p>Lorem Ipsum is simply dummy text of the</p>
             </div>
             <div class="card">
-                <div class="iconHolder"><img src="images/camera.png" alt="camera"></div>
-                <h3>CAMERA</h3>
+                <div class="icon-holder"><img src="images/camera.png" alt="camera"></div>
+                <h2>CAMERA</h2>
                 <p>Lorem Ipsum is simply dummy text of the</p>
             </div>
         </div>
+        </main>
         <footer>
-            <div class="copy">Copyright 1999-2026</div>
-            <div class="footerMenu">
+            <div class="copy">&copy; 1999-2026 Warm-up</div>
+            <div aria-label="Footer" class="footer-menu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -57,7 +64,6 @@
                 </ul>
             </div>
         </footer>
-    </section>
-    <script src="script/script.js"></script>
+    </div>
 </body>
 </html>

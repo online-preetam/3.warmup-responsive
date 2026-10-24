@@ -15,13 +15,13 @@ body{
     padding: 0;
     font:normal 14px/normal Arial, Helvetica, sans-serif;
 }
-.wraper{
+.wrapper{
     padding: 15px;
     margin: 0;
     width: 100%;
     min-height: 100vh;
 }
-.wraper *:last-child{
+.wrapper *:last-child{
     margin-bottom: 0;
 }
 header{
@@ -73,11 +73,12 @@ header{
     color: var(--colourOne);
     text-decoration: none;
     transition: var(--animationOne);
+    text-transform: uppercase
 }
 .main-menu ul li:hover a{
     color: var(--colourTwo);
 }
-.heroSection{
+.hero-section{
     padding: 0 0 15px 0;
     margin: 0 0 15px 0;
     border-bottom: 1px solid var(--BordercolourOne);
@@ -85,12 +86,12 @@ header{
     flex-direction: column;
     align-items: center;
 }
-.heroSection h1{
+.hero-section h1{
     text-transform: uppercase;
     font-size: clamp(1rem, 2.5vw, 2rem);
     text-align: center;
 }
-.heroButtan{
+.hero-button{
     padding: 15px;
     margin: 0;
     border-radius: 3px;
@@ -101,15 +102,14 @@ header{
     transition: var(--animationOne);
 
 }
-.heroButtan:hover{
+.hero-button:hover{
     color: var(--colourfour);
     background-color: var(--colourThree);
 
 }
-.cardSection{
+.card-section{
     padding: 0 0 15px 0;
     margin: 0 0 15px 0;
-    border-bottom: 1px solid var(--BordercolourOne);
     display: flex;
     justify-content: space-between;
 }
@@ -119,7 +119,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*width:33.33%;*/
     flex-grow: 1;
     border-radius: 3px;
     border:1px solid var(--BordercolourOne);
@@ -127,13 +126,13 @@ header{
 .card:last-of-type{
     margin: 0;
 }
-.iconHolder{
+.icon-holder{
     padding: 0;
     margin: 0 0 15px 0;
     width: 100%;
     text-align: center;
 }
-.iconHolder img{
+.icon-holder img{
     padding: 0;
     margin: 0;
     max-width: 100%;
@@ -145,6 +144,7 @@ header{
     width: 100%;
     text-align: center;
     font-size: 18px;
+    text-transform: uppercase
 }
 .card p{
     padding: 0;
@@ -157,7 +157,7 @@ header{
     margin-bottom: 0;
 }
 footer{
-    padding: 15px 0;
+    padding: 0;
     margin: 0 0 15px 0;
     display: flex;
     justify-content: space-between;
@@ -169,46 +169,57 @@ footer > div{
 footer > div:last-of-type{
     margin-right:0;
 }
-.copy{
+.copyright{
     font-size: 12px;
 }
-.footerMenu ul{
+.footer-menu{
+    padding: 0;
+    margin: 0;
+}
+.footer-menu ul{
     padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
 }
-.footerMenu ul li{
+.footer-menu ul li{
     padding: 0 5px 0 0;
     margin: 0 5px 0 0;
     border-right: 1px solid #000;
 }
-.footerMenu ul li:last-of-type{
+.footer-menu ul li:last-of-type{
     padding: 0;
     margin: 0;
     border-right: none;
 }
-.footerMenu ul li a{
+.footer-menu ul li a{
     padding: 0;
     margin: 0;
     color: #000;
     font-size: 12px;
     text-decoration: none;
+    text-transform: uppercase
 }
-.footerMenu ul li:hover a{
+.footer-menu ul li:hover a{
     color: #ff0000;
 }
-.responsiveButton{
-    padding: 0;
-    margin: 0;
-    position: relative;
-    display: none;
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    right: 0;
+.menu-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  width: 22px;
+  height: 22px;
+  right: 0;
 }
-.responsiveButton span{
+.menu-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.menu-toggle span{
     padding: 0;
     margin: 0;
     display: flex;
@@ -218,14 +229,14 @@ footer > div:last-of-type{
     background-color: rgba(0, 0, 0, 1);
    
 }
-.responsiveButton span:nth-of-type(1){
+.menu-toggle span:nth-of-type(1){
     top:0;
     left:50%;
     rotate: 0deg;
     transition: var(--animationOne);
     transform: translate(-50%, -50%);
 }
-.responsiveButton.active span:nth-of-type(1){
+.menu-toggle.active span:nth-of-type(1){
     top:50%;
     left: 50%;
     rotate: 45deg;
@@ -234,14 +245,14 @@ footer > div:last-of-type{
     margin-top:8px;
     margin-left:-4px;
 }
-.responsiveButton span:nth-of-type(3){
+.menu-toggle span:nth-of-type(3){
     bottom:0;
     left:50%;
     rotate: 0deg;
     transition: var(--animationOne);
     transform: translate(-50%, -50%);
 }
-.responsiveButton.active span:nth-of-type(3){
+.menu-toggle.active span:nth-of-type(3){
     bottom:50%;
     left:50%;
     rotate: -45deg;
@@ -250,51 +261,23 @@ footer > div:last-of-type{
     margin-bottom:4px;
     margin-left:-3px;
 }
-.responsiveButton span:nth-of-type(2){
+.menu-toggle span:nth-of-type(2){
     top:50%;
     left:50%;
     rotate: 0deg;
     transition: var(--animationOne);
     transform: translate(-50%, -50%);
 }
-.responsiveButton.active span:nth-of-type(2){
+.menu-toggle.active span:nth-of-type(2){
     background-color: rgba(0, 0, 0, 0);
     transition: var(--animationOne);
 }
-
-
-/*.responsiveButton span:nth-of-type(1){
-    top:50%;
-    margin-top: -5px;
-    rotate: 0deg;
-    transition: var(--animationOne);
-    left:50%;
-    transform: translateX(-50%);
+.main-section{
+    padding: 0 0 15px 0; 
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid var(--BordercolourOne);
 }
-.responsiveButton span:nth-of-type(2){
-    top:50%;
-    margin-top: -1px;
-    transition: var(--animationOne);
+ .main-section > *:last-child{
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
-.responsiveButton span:nth-of-type(3){
-    top:50%;
-    margin-top: 4px;
-    rotate: 0deg;
-    transition: var(--animationOne);
-    left:50%;
-    transform: translate(-50%, -50%);
-}
-.responsiveButton.active span:nth-of-type(2){
-    background-color: rgba(0, 0, 0, 0);
-    transition: var(--animationOne);
-    top:50%;
-}
-.responsiveButton.active span:nth-of-type(1){
-    rotate: 45deg;
-    transition: var(--animationOne);
-}
-.responsiveButton.active span:nth-of-type(3){
-    rotate: -45deg;
-    transition: var(--animationOne);
-    top:50%;
-}*/

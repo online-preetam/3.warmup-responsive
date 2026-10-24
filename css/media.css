@@ -2,11 +2,15 @@
 	.main-menu{
         display: none;
         position: absolute;
+        flex-direction: column;
     }
-    .responsiveButton{
+    .main-menu.open{
+       display: flex;
+    }
+    .menu-toggle{
         display: flex;
     }
-    .responsiveButton.active + .main-menu{
+    .menu-toggle.active + .main-menu{
         display: block;
     }
     .main-menu{
@@ -17,6 +21,7 @@
         
     .main-menu ul{
         flex-direction: column;
+        width: 100%;
         
     }
     .main-menu ul li{
@@ -30,7 +35,7 @@
     }
 }
 @media only screen and (max-width: 426px)  {
-	.cardSection{
+	.card-section{
         flex-direction: column;
     }
     .card{
@@ -52,13 +57,13 @@
         margin: 0;
         border-bottom: none;
     }
-    .copy{
+    .copyright{
         text-align: center;
     }
-    .footerMenu{
+    .footer-menu{
         display: flex;
     }
-    .footerMenu ul{
+    .footer-menu ul{
         margin: 0 auto;
     }
 }
